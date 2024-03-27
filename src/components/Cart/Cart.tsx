@@ -75,7 +75,7 @@ function Cart({ }: Props) {
 
     return (
         <div className={`${responsiveState ? 'bottom-0' : 'h-full top-0'}  fixed left-0 w-full lg:relative lg:w-80 lg:h-auto  bg-gray-200 p-5`}>
-            <div className={`${responsiveState ? 'hidden' : 'mb-5 block'} cart-heading justify-center items-center flex`}>
+            <div className={`${responsiveState ? 'hidden' : 'mb-5 block'} cart-heading justify-center items-center flex lg:block`}>
                 <h3 className='text-2xl text-center mr-auto lg:mr-0'>Winkelmandje</h3>
                 <button type="button" className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 lg:hidden" onClick={(e) => cartView(e)}>
                     <span className="sr-only">Close menu</span>
