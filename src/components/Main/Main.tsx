@@ -6,10 +6,8 @@ type Props = {
 
 function Main({ children }: Props) {
     return (
-        <main className='h-full'>
-            <div className="main-inner h-full lg:relative flex">
-                {children}
-            </div>
+        <main className='grow relative flex'>
+            {children}
         </main>
     )
 }
