@@ -49,7 +49,7 @@ function MenuItem({ id, title, description, price, image, count }: Props) {
 
     return (
         <div className='bg-gray-200 relative flex'>
-            <figure className='restaurant__image' style={{ position: 'relative', width: '200px', minHeight: '120px' }}>
+            <figure className='restaurant__image hidden lg:block' style={{ position: 'relative', width: '200px', minHeight: '120px' }}>
                 <Image
                     src={image.img}
                     alt="Picture of the author"
