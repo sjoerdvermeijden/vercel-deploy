@@ -74,7 +74,7 @@ function Cart({ }: Props) {
     }
 
     return (
-        <div className={`${responsiveState ? 'bottom-0' : 'h-full top-0'}  absolute left-0 w-full lg:relative lg:w-80  bg-gray-200 p-5`}>
+        <div className={`${responsiveState ? 'bottom-0' : 'h-full top-0'}  fixed left-0 w-full lg:relative lg:w-80  bg-gray-200 p-5`}>
             <div className={`${responsiveState ? '' : 'mb-5'} cart-heading justify-center items-center flex`}>
                 {
                     responsiveState
