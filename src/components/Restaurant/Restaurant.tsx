@@ -33,7 +33,7 @@ function Restaurant({ name, description, image, reviews }: Props) {
     return (
         <>
             <div className="restaurant text-xl transition bg-gray-200 hover:bg-gray-300 flex">
-                <figure className='restaurant__image' style={{ position: 'relative', width: '200px', minHeight: '120px' }}>
+                <figure className='restaurant__image hidden lg:block' style={{ position: 'relative', width: '200px', minHeight: '120px' }}>
                     <Image
                         src={image.img}
                         alt="Picture of the author"
