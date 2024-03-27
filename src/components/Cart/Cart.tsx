@@ -60,7 +60,7 @@ function Cart({ }: Props) {
     }
 
     return (
-        <div className='absolute right-0 p-5 top-0 h-full w-80 bg-gray-200'>
+        <div className='h-full w-full lg:w-80  bg-gray-200 p-5'>
             <ul className="cart-items mb-4">
                 {
                     cartItems.map((item) => {

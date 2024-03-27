@@ -8,7 +8,7 @@ import Restaurants from '../components/Restaurants/Restaurants'
 export default function Home() {
   return (
     <Layout>
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto py-10 px-4">
         <Restaurants />
       </div>
     </Layout>

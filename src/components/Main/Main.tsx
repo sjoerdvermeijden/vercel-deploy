@@ -7,7 +7,7 @@ type Props = {
 function Main({ children }: Props) {
     return (
         <main className='h-full'>
-            <div className="main-inner mx-auto py-10 h-full relative">
+            <div className="main-inner h-full relative flex">
                 {children}
             </div>
         </main>

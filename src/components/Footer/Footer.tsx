@@ -5,9 +5,7 @@ type Props = {}
 function Footer({ }: Props) {
     return (
         <footer className='bg-red-600 py-5 text-white'>
-            <div className="footer-inner container mx-auto px-4">
-                Footer
-            </div>
+            <div className="footer-inner container mx-auto px-4"></div>
         </footer>
     )
 }
