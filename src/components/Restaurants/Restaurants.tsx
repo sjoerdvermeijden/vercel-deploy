@@ -16,7 +16,7 @@ function Restaurants({ }: Props) {
                     restaurants.map((item) => {
                         return <li key={item.id} className='restaurant'>
                             <Link href={`/restaurants/${item.id}`}>
-                                <Restaurant />
+                                <Restaurant {...item} />
                             </Link>
                         </li>
                     })
@@ -26,4 +26,4 @@ function Restaurants({ }: Props) {
     )
 }
 
-export default Restaurants;
+export default Restaurants
