@@ -44,7 +44,7 @@ function RestaurantPage({ }: Restaurant) {
         <div>
             <Layout>
                 <div className="container mb-11 lg:mb-0 mx-auto py-10 px-4">
-                    <h1 className='text-3xl mb-7'>{restaurantState?.name}</h1>
+                    <h1 className='text-2xl mb-5'>{restaurantState?.name}</h1>
                     <ul className="menu flex flex-col gap-4">
                         {restaurantState?.menu.map((item) => {
                             return (

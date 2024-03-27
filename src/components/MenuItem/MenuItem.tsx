@@ -64,7 +64,7 @@ function MenuItem({ id, title, description, price, image, count }: Props) {
                 <h1 className='text-xl mb-2 font-bold'>{title}</h1>
                 <p className='font-light text-sm mb-2'>{description}</p>
                 <p className='font-bold text-sm'>€{price}</p>
-                <button className="bg-gray-300  transition absolute right-0 top-0 text-black py-2 px-4 hover:bg-gray-500 hover:text-white" onClick={(e) => orderButton(e, id)}>
+                <button className="bg-gray-300  absolute right-0 top-0 text-black py-2 px-4 hover:bg-gray-500 hover:text-white" onClick={(e) => orderButton(e, id)}>
                     +
                 </button>
             </div>
