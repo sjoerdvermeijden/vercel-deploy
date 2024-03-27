@@ -6,7 +6,11 @@ type Props = {
 
 function Main({ children }: Props) {
     return (
-        <div>{children}</div>
+        <main className='h-full'>
+            <div className="main-inner mx-auto py-10 h-full relative">
+                {children}
+            </div>
+        </main>
     )
 }
 
