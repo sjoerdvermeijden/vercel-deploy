@@ -1,13 +1,33 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 
 import { CartContext } from '@/context/CartContext';
 import { TotalContext } from '@/context/TotalContext'
+
+import { useRouter } from 'next/router'
 
 type Props = {}
 
 function Cart({ }: Props) {
     const [cartItems, setCartItems] = useContext(CartContext);
     const { total, setTotal } = useContext(TotalContext);
+
+    const router = useRouter()
+
+    useEffect(() => {
+        const handleRouteChange = (url: string) => {
+            console.log(
+                `App is changing to ${url}`
+            )
+            setCartItems([])
+            setTotal(0)
+        }
+
+        router.events.on('routeChangeStart', handleRouteChange)
+
+        return () => {
+            router.events.off('routeChangeStart', handleRouteChange)
+        }
+    }, [])
 
     const addItem = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, id: number) => {
         e.preventDefault();
