@@ -39,14 +39,6 @@ function RestaurantPage({ }: Restaurant) {
 
     const [restaurantState, setRestaurantState] = useState<Restaurant>();
 
-    const ratingArray = restaurantState?.reviews.map((item) => {
-        return item.rating;
-    }).reduce(
-        (accumulator, currentValue) => accumulator + currentValue,
-    )
-
-    const averageRrating = (ratingArray / restaurantState?.reviews.length).toFixed(1);
-
     useEffect(() => {
         if (id) {
             restaurants.map((item) => {
@@ -63,7 +55,6 @@ function RestaurantPage({ }: Restaurant) {
                 <div className="container mb-11 lg:mb-0 mx-auto py-10 px-4">
                     <div className="restaurant-heading flex align-center mb-5">
                         <h1 className='text-2xl mr-3'>{restaurantState?.name}</h1>
-                        <span className='text-sm inline-block leading-8'><FontAwesomeIcon icon={faStar} color="orange" className='-mt-1' /> {averageRrating}</span>
                     </div>
                     <ul className="menu flex flex-col gap-4">
                         {restaurantState?.menu.map((item) => {
