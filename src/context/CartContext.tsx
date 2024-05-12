@@ -29,6 +29,13 @@ export const CartContext = createContext<ContextValue>([[], () => { }]);
 export function CartComponent({ children }: Props) {
     const [cartItems, setCartItems] = useState<CartItem[]>([]);
 
+    const addCartItem = () => {
+        setCartItems([...cartItems, cartItem])
+    }
+
+    const deleteCartItem = () => {
+    }
+
     useEffect(() => {
         if (localStorage["cartItems"]) {
             const cartItems = JSON.parse(localStorage["cartItems"]);
@@ -41,7 +48,7 @@ export function CartComponent({ children }: Props) {
 
     return (
         <>
-            <CartContext.Provider value={[cartItems, setCartItems]}>
+            <CartContext.Provider value={[cartItems, addCartItem]}>
                 {children}
             </CartContext.Provider>
         </>

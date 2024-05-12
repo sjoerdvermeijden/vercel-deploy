@@ -5,6 +5,8 @@ import Link from 'next/link'
 type Props = {}
 
 function Header({ }: Props) {
+
+
     return (
         <header className='bg-slate-700 text-white py-5'>
             <div className="header-inner px-4">
