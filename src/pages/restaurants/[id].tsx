@@ -53,14 +53,13 @@ function RestaurantPage({ }: Restaurant) {
         <div>
             <Layout>
                 <div className="container mb-11 lg:mb-0 mx-auto py-10 px-4">
-                    <div className="restaurant-heading flex align-center mb-5">
+                    <div className="flex align-center mb-5">
                         <h1 className='text-2xl mr-3'>{restaurantState?.name}</h1>
                     </div>
-                    <ul className="menu flex flex-col gap-4">
+                    <ul className="flex flex-col gap-4">
                         {restaurantState?.menu.map((item) => {
                             return (
                                 <li
-                                    className="menu__item"
                                     key={restaurantState?.id}
                                 >
                                     <MenuItem

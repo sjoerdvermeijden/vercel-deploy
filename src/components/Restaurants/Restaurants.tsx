@@ -11,7 +11,7 @@ function Restaurants({ }: Props) {
     return (
         <>
             <h1 className='text-2xl mb-5'>Restauranten</h1>
-            <ul className='restaurants flex flex-col gap-4'>
+            <ul className='flex flex-col gap-4'>
                 {
                     restaurants.map((item) => {
                         return <li key={item.id} className='restaurant'>

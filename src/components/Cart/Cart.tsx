@@ -89,16 +89,16 @@ function Cart({ }: Props) {
                 {
                     cartItems.map((item) => {
                         return (
-                            <li className="cart-items__item py-4 border-b border-gray-300" key={item?.id}>
-                                <div className="item flex flex-col items-end">
-                                    <div className="item__content w-full">
-                                        <div className="item__heading flex">
-                                            <p className="item__count mr-1">({item.count})</p>
-                                            <p className="item__title mb-3 mr-auto">{item.title}</p>
-                                            <p className="item__price font-bold">€{(item.price * item.count).toFixed(2)}</p>
+                            <li className="py-4 border-b border-gray-300" key={item?.id}>
+                                <div className="flex flex-col items-end">
+                                    <div className="w-full">
+                                        <div className="flex">
+                                            <p className="mr-1">({item.count})</p>
+                                            <p className="mb-3 mr-auto">{item.title}</p>
+                                            <p className="font-bold">€{(item.price * item.count).toFixed(2)}</p>
                                         </div>
                                     </div>
-                                    <div className="item__button-group">
+                                    <div>
                                         <button className='px-2 bg-gray-500 text-white font-light rounded mr-1' onClick={(e) => subtractItem(e, item.id)}>-</button>
                                         <button className='px-2 bg-gray-500 text-white font-light rounded' onClick={(e) => addItem(e, item.id)}>+</button>
                                     </div>
